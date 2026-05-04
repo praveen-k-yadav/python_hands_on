@@ -29,11 +29,25 @@
 
 # show(5)
 
-def factorial(n):
-    if(n==0 or n==1):
-        return 1
-    else:
-        return n* factorial(n-1)
+# def factorial(n):
+#     if(n==0 or n==1):
+#         return 1
+#     else:
+#         return n* factorial(n-1)
     
-x= factorial(5)
-print(x)
+# x= factorial(5)
+# print(x)
+
+# def func(a,b=10,*args,**kwargs):
+#     print(a,b,args,kwargs)
+
+# func(1,2,3,4,x=5)
+
+# def info(**kwargs):
+#     for key,value in kwargs.items():
+#         print(f"{key}:{value}")
+
+# info(name="PK",age=26,city="Mumbai")
+
+square=lambda a,b=10:a+b
+print(square(5))

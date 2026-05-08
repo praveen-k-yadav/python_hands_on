@@ -22,5 +22,13 @@ import os
 # f=open("sample.txt","w")
 # f.close()
 
-os.remove("sample.txt")
+# os.remove("sample.txt")
+
+# f=open("test2.txt","w")
+# f.write("Test 2 File added")
+# f.close()
+
+os.remove("test2.txt")
+
+
 

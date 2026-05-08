@@ -40,7 +40,44 @@
 # x= func1()
 # print(x)
 
-a= int(input("Enter value between 5 and 9:"))
+# a= int(input("Enter value between 5 and 9:"))
 
-if(a<5 or a>9):
-    raise ValueError("Value not between 5 and 9")
+# if(a<5 or a>9):
+#     raise ValueError("Value not between 5 and 9")
+
+#return from finlly always override the one returned from try or except
+# def test():
+#     try:
+#         return "From Try Block"
+#     finally:
+#         return "From Return Block"
+    
+# print(test())
+
+# Creating a custom Exception
+
+class AgeError(Exception):
+    pass
+
+def check_age(age):
+    if (age<0):
+        raise AgeError("Age cannot be negative")
+    if(age>150):
+        raise AgeError("Age is quite large")
+    print(f"Age is: {age}")
+
+try:
+    check_age(200)
+except AgeError as e:
+    print(f"Error: {e}")
+
+try:
+    check_age(-6)
+except AgeError as e:
+    print(f"Error: {e}")
+
+
+try:
+    check_age(20)
+except AgeError as e:
+    print(f"Error: {e}")
